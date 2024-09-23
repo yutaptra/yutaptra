@@ -12,14 +12,41 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+            font-family: Arial, sans-serif;
         }
         h1 {
             font-size: 3em;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        button {
+            padding: 10px 20px;
+            background-color: white;
+            border: none;
+            border-radius: 5px;
+            color: orange;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        button:hover {
+            background-color: orange;
             color: white;
         }
     </style>
 </head>
 <body>
-    <h1>Hello World!</h1>
+    <div id="content">
+        <h1>Hello World!</h1>
+        <button onclick="changeMessage()">Click Me!</button>
+    </div>
+
+    <script>
+        function changeMessage() {
+            const h1 = document.querySelector('h1');
+            h1.textContent = "You clicked the button!";
+        }
+    </script>
 </body>
 </html>
